@@ -84,12 +84,9 @@
             @yield('content')
         </main>
     </div>
-    <script src="https://cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+    <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
          <script>
-             windows.onload = finction() {
-                     CKEDITOR.replace('article-ckeditor', {
-                                 filebrowserBrowserUrl: filemanager.ckBrowserUrl
-                             }
+             CKEDITOR.replace('summary-ckeditor');
 
          </script>
 </body>
