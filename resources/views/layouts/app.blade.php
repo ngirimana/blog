@@ -33,21 +33,28 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                       <li class="nav-item">
+                        <li class="nav-item">
                             <a class="nav-link" href="/">Home</a>
                         </li>
-                        @if (Route::has('register'))
+
                         <li class="nav-item">
                             <a class="nav-link" href="/about">About</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/services">Servives</a>
+                        </li>
+
+                    </ul>
+
+                    <!-- Right Side Of Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Authentication Links -->
+                        @if (Route::has('register'))
+                        <li class="nav-item">
+                            <a class="nav-link" href="/posts">Posts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/posts/create">Add Post</a>
                         </li>
                         @else
                         <li class="nav-item dropdown">
@@ -72,10 +79,19 @@
             </div>
         </nav>
 
-        <main class="container" >
+        <main class="container">
+            @include('inc.message')
             @yield('content')
         </main>
     </div>
+    <script src="https://cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+         <script>
+             windows.onload = finction() {
+                     CKEDITOR.replace('article-ckeditor', {
+                                 filebrowserBrowserUrl: filemanager.ckBrowserUrl
+                             }
+
+         </script>
 </body>
 </html>
 
