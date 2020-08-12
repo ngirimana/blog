@@ -8,7 +8,7 @@
         @foreach($posts as $post)
         <div class="card" style="width: 80%; margin:2rem auto; padding:1rem">
             <h3><a href="posts/{{$post->id}}">{{$post->title}}</a></h3>
-            <small>Written on {{$post->created_at}}</small>
+            <small>Written on {{$post->created_at}} by {{$post->user->name}}</small>
         </div>
         @endforeach
         {{$posts->links()}}
