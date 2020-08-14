@@ -11,7 +11,7 @@
      </div>
      <div class="form-group">
          {{Form::label('body','Body')}}
-         {{Form::textarea('body','',['id'=>"summary-ckeditor",'class'=>'form-control','placeholder'=>'Body','required'])}}
+         {!!Form::textarea('body','',['id'=>"summary-ckeditor",'class'=>'form-control','placeholder'=>'Body','required'])!!}
         
      </div>
      {{Form::submit('submit',['class'=>'btn btn-primary'])}}
